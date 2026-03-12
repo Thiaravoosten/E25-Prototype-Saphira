@@ -1,0 +1,87 @@
+body{
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+
+/* BLACK Sharepoint bar */
+.sp-topbar {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.sp-topbar i {
+    margin-left: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.sp-topbar i:hover {
+    opacity: 1;
+}
+
+.sp-logo {
+    height: 26px;
+    margin-right: 10px;
+}
+
+.sp-left, .sp-right {
+    display: flex;
+    align-items: center;
+}
+
+.sp-title {
+    font-weight: 600;
+    margin-right: 6px;
+}
+
+.divider {
+    margin: 0 6px;
+    opacity: 0.5;
+}
+
+.user {
+    background: #444;
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.sp-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.searchbar {
+    background: white;
+    border-radius: 6px;
+    padding: 6px 10px;
+    width: 450px;
+    display: flex;
+    align-items: center;
+    margin-right: 70px;
+}
+
+.searchbar input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 14px;
+}
+
+.searchbar i {
+    color: #555;
+}

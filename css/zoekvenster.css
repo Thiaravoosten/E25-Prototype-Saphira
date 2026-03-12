@@ -1,0 +1,560 @@
+/* =========================
+   Base
+========================= */
+:root{
+    --brand: #7f1e38;
+    --brand-dark: #2b0a13;
+    --text: #2b2b2b;
+    --muted: #666;
+    --border: #eee;
+    --shadow: 0 15px 35px rgba(0,0,0,0.08);
+    --radius: 16px;
+  }
+  
+  body{
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+  }
+  
+  /* =========================
+     Zoekvenster layout (2 cards)
+  ========================= */
+  .zoekvenster-layout{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;      /* cards even hoog */
+    gap: 40px;
+    margin: 70px auto;
+    width: 85%;
+    max-width: 1300px;
+  }
+  
+  /* Cards */
+  .zoekvenster-box,
+  .zoekvenster-info{
+    background: #fff;
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 40px 45px;        /* gelijk voor beide */
+    display: flex;
+    flex-direction: column;    /* zodat knoppen onderaan kunnen */
+  }
+  
+  /* =========================
+     Linker card: zoeken
+  ========================= */
+  .zoekvenster-box{
+    width: 420px;
+  }
+  
+  .zoekvenster-box h2{
+    margin: 0 0 25px;
+    font-size: 26px;
+    font-weight: 800;
+    color: #000;
+  }
+  
+  .search-form{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .search-form .input-group{
+    margin-bottom: 26px;       /* meer lucht */
+  }
+  
+  .search-form .input-group:last-of-type{
+    margin-bottom: 0;
+  }
+  
+  .input-group label{
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: #000;
+  }
+  
+  .input-group select{
+    width: 100%;
+    padding: 14px;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    transition: border 0.2s ease;
+  }
+  
+  .input-group select:focus{
+    border-color: var(--brand);
+    outline: none;
+  }
+  
+  /* Zoek knop altijd onderaan links */
+  .search-btn{
+    margin-top: auto;
+    width: 100%;
+    background: var(--brand);
+    color: #fff;
+    padding: 14px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 800;
+    transition: 0.2s ease;
+  }
+  
+  .search-btn:hover{
+    background: var(--brand-dark);
+  }
+  
+  /* =========================
+     Rechter card: toelichting
+  ========================= */
+  .zoekvenster-info{
+    max-width: 500px;
+  }
+  
+  .zoekvenster-info h3{
+    margin: 0 0 25px;
+    text-align: left;
+    font-size: 26px;
+    font-weight: 800;
+    color: #000;
+  }
+  
+  .toelichting-list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex: 1;                  /* vult ruimte -> knop naar onder */
+  }
+  
+  .toelichting-list li{
+    position: relative;
+    padding-left: 34px;
+    margin: 14px 0;
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  
+  .toelichting-list li::before{
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 22px;
+    height: 22px;
+    border-radius: 999px;
+    display: grid;
+    place-items: center;
+    font-weight: 900;
+    font-size: 14px;
+    color: var(--brand);
+    background: rgba(127, 30, 56, 0.08);
+  }
+  
+  .toelichting-list strong{
+    color: var(--brand);
+    font-weight: 900;
+  }
+  
+  /* Zie diagram knop: onderaan rechts-card, zelfde baseline als zoekknop */
+  .see-diagram-btn{
+    margin-top: auto;
+    align-self: flex-start;
+    min-width: 260px;
+  
+    background: #f3f3f4;
+    border: 1px solid #d7d7db;
+    color: var(--text);
+  
+    padding: 12px 18px;
+    border-radius: 10px;
+  
+    cursor: pointer;
+    font-weight: 800;
+    font-size: 16px;
+  
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+  
+    transition: 0.18s ease;
+  }
+  
+  .see-diagram-btn::before{
+    content: "→";
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--brand);
+    line-height: 1;
+  }
+  
+  .see-diagram-btn:hover{
+    background: #fff;
+    border-color: rgba(127, 30, 56, 0.35);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.10);
+    transform: translateY(-1px);
+  }
+  
+  /* =========================
+     Diagram (onder beide cards)
+     Let op: #diagram-inline staat NU buiten .zoekvenster-info
+  ========================= */
+  #diagram-inline{
+    width: 85%;
+    max-width: 1300px;
+    margin: 18px auto 0;
+  
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    background: #fff;
+    box-shadow: var(--shadow);
+  
+    overflow: hidden;         /* geen overlap */
+  }
+  
+  .diagram-panel-top{
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--border);
+  }
+  
+  .diagram-panel-title{
+    font-weight: 900;
+    color: #000;
+    font-size: 16px;
+  }
+  
+  .diagram-inline-img{
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 18px;
+    box-sizing: border-box;
+  }
+  
+  /* =========================
+     Popups (zoekresultaten)
+  ========================= */
+  .search-results-popup{
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .search-results-popup .popup-inner{
+    background: #fff;
+    border-radius: var(--radius);
+    padding: 28px 32px 40px;
+    width: min(1100px, 95vw);
+    max-height: 85vh;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+    position: relative;
+    overflow: auto;
+  }
+  
+  .search-results-popup .popup-inner h3{
+    margin: 0 0 18px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--brand);
+  }
+  
+  .search-results-popup .close-results{
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+    color: var(--muted);
+    user-select: none;
+  }
+  
+  .search-results-popup .close-results:hover{
+    color: var(--brand);
+  }
+  
+  /* Table */
+  .result-table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 6px;
+  }
+  
+  .result-table th{
+    background: linear-gradient(180deg, var(--brand), #4b0f20);
+    color: #fff;
+    padding: 10px;
+    text-align: left;
+    font-weight: 900;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+  
+  .result-table td{
+    padding: 10px;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+  
+  .result-table tr:hover{
+    background: #fafafa;
+  }
+  
+  .result-table a{
+    color: #3b9797;
+    text-decoration: none;
+    font-weight: 800;
+  }
+  
+  .result-table a:hover{
+    text-decoration: underline;
+  }
+  
+  /* Tooltip */
+  .kf-main{
+    margin-right: 10px;
+    font-weight: 700;
+  }
+  
+  .kf-more-btn{
+    background: transparent;
+    border: 1px solid var(--brand);
+    color: var(--brand);
+    border-radius: 999px;
+    padding: 4px 10px;
+    font-weight: 900;
+    cursor: pointer;
+    font-size: 12px;
+    line-height: 1.2;
+    transition: 0.15s ease;
+  }
+  
+  .kf-more-btn:hover{
+    background: var(--brand);
+    color: #fff;
+  }
+  
+  .kf-tooltip{
+    position: absolute;
+    z-index: 10000;
+    width: 320px;
+  }
+  
+  .kf-tooltip-inner{
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+    border: 1px solid var(--border);
+    padding: 14px 14px 12px;
+    position: relative;
+  }
+  
+  .kf-tooltip-title{
+    font-weight: 900;
+    color: var(--brand);
+    margin-bottom: 8px;
+    padding-right: 20px;
+  }
+  
+  .kf-tooltip-list{
+    margin: 0;
+    padding-left: 18px;
+    max-height: 180px;
+    overflow: auto;
+  }
+  
+  .kf-tooltip-list li{
+    margin: 6px 0;
+    color: var(--text);
+    line-height: 1.3;
+  }
+  
+  .kf-tooltip-close{
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    border: 0;
+    background: transparent;
+    font-size: 20px;
+    cursor: pointer;
+    color: var(--muted);
+    user-select: none;
+  }
+  
+  .kf-tooltip-close:hover{
+    color: var(--brand);
+  }
+  
+  /* =========================
+     Responsive
+  ========================= */
+  @media (max-width: 900px){
+    .zoekvenster-layout{
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .zoekvenster-box,
+    .zoekvenster-info{
+      width: 100%;
+      max-width: 700px;
+    }
+  
+    .zoekvenster-info h3{
+      text-align: center;
+    }
+  
+    .see-diagram-btn{
+      width: 100%;
+      min-width: 0;
+      align-self: stretch;
+      justify-content: center;
+    }
+  
+    #diagram-inline{
+      width: 85%;
+      max-width: 700px;
+    }
+  }
+  
+  @media (max-width: 850px){
+    .search-results-popup .popup-inner{
+      padding: 20px;
+    }
+  
+    .result-table th,
+    .result-table td{
+      font-size: 13px;
+      padding: 8px;
+    }
+  
+    .kf-tooltip{
+      width: min(320px, 90vw);
+    }
+  }
+  
+
+  /* === Diagram onder de 2 kaarten (niet als 3e kolom) === */
+.zoekvenster-layout{
+    flex-wrap: wrap;                 /* mag naar volgende regel */
+    align-items: stretch;
+  }
+  
+  /* Hou de 2 kaarten op rij 1 */
+  .zoekvenster-box,
+  .zoekvenster-info{
+    flex: 0 0 auto;
+  }
+  
+  /* Diagram wordt rij 2 en pakt volledige breedte */
+  #diagram-inline{
+    flex: 0 0 100%;
+    width: 100%;
+    max-width: 1300px;               /* zelfde max als layout */
+    margin: 18px auto 0;
+  }
+  
+
+  /* diagram floating over de onderkant van de toelichting-card */
+.zoekvenster-info{
+    position: relative;
+    overflow: visible; /* anders wordt de “hover” afgeknipt */
+  }
+  
+  /* hidden = echt weg */
+  #diagram-inline[hidden]{
+    display: none;
+  }
+  
+  /* Hover panel */
+  #diagram-inline{
+    position: absolute;
+    left: 0;
+    right: 0;
+  
+    /* hoeveel hij OVER de kaart heen begint (tunen!) */
+    top: calc(100% - 140px);   /* ↑ begin 140px boven de onderkant van de kaart */
+  
+    z-index: 50;
+    background: #fff;
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+  
+    overflow: hidden;
+  }
+  
+  /* titelbalk */
+  #diagram-inline .diagram-panel-top{
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--border);
+  }
+  
+  #diagram-inline .diagram-panel-title{
+    font-weight: 900;
+    color: #000;
+    font-size: 16px;
+  }
+  
+  /* afbeelding netjes */
+  #diagram-inline .diagram-inline-img{
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 18px;
+    box-sizing: border-box;
+  }
+  
+  /* mobiel: liever gewoon onder elkaar (geen hover buiten beeld) */
+  @media (max-width: 900px){
+    #diagram-inline{
+      position: static;
+      margin-top: 16px;
+    }
+  }
+  
+
+/* ===== Hover stroomdiagram positionering fix ===== */
+.zoekvenster-info{
+    position: relative;
+    overflow: visible; /* belangrijk: diagram mag buiten de kaart vallen */
+  }
+  
+  #diagram-inline{
+    position: absolute;
+    /* top: calc(100% - 60px); <-- HIERMEE schuif je hem omhoog */
+    top: calc(100% - 600px); /* <-- HIERMEE schuif je hem omhoog */
+    right: 0;
+    width: 520px;
+    z-index: 50;
+  
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    background: #fff;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.18);
+  }
+  
+  /* ===== Extra witruimte boven knoppen ===== */
+  .search-btn{
+    margin-top: auto;
+    margin-bottom: 20px;
+  }
+  
+  .see-diagram-btn{
+    margin-top: 32px;
+    margin-bottom: 20px;
+  }
+  
+
+  

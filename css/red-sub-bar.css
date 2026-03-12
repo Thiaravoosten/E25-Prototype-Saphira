@@ -1,0 +1,20 @@
+body{
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* RED sub bar*/
+.red-sub-bar{
+    background-color: #7f1e38;
+    height: 75px;
+    width: 100%;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bar-title h1{
+    color: white;
+    margin-bottom: 30px;
+}

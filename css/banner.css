@@ -1,0 +1,86 @@
+body{
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* ===== HERO MET FOTO ACHTERGROND ===== */
+.hero-section {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    height: 450px;                           /* Mooie CZ–achtige hoogte */
+    padding-left: 80px;
+    margin-top: 2px;                      /* Zet het tekstblok iets naar rechts */
+    
+    background-image: url("../afbeeldingen/test.png");
+    background-size: cover;                  /* Foto bedekt alles */
+    background-position: center;             /* Mooie focus in het midden */
+    background-repeat: no-repeat;
+    
+    position: relative;
+
+    @media(min-width: 2004px){
+        background-image: url("../afbeeldingen/testgroot.png");
+    }
+}
+
+/* Donker overlay, zoals CZ */
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.7) 0%,
+        rgba(0, 0, 0, 0.3) 60%,
+        rgba(0, 0, 0, 0.0) 100%
+    );
+    z-index: 0;
+}
+
+
+/* ===== TEKSTBLOK ===== */
+.text-block {
+    position: relative;
+    z-index: 1;                               /* staat boven de overlay */
+    background: rgba(25, 35, 45, 0.9);        /* donker semi-transparant vlak */
+    padding: 35px 45px;
+    border-radius: 12px;
+    max-width: 520px;
+    color: white;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.32);
+}
+
+/* TITEL */
+.text-block h1 {
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+/* TEKST */
+.text-block p {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+/* BUTTON
+.cta-button {
+    display: inline-block;
+    background-color: #7f1e38;
+    color: white;
+    padding: 14px 26px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.cta-button:hover {
+    background-color: #c44a1b;
+} */

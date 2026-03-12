@@ -1,0 +1,165 @@
+/* ===========================
+   E25 ACADEMY SECTION (TIGHTER)
+=========================== */
+
+.academy-section {
+    width: 76%;
+    margin: 56px auto 120px; /* ⬅️ minder ruimte boven, onder mag ruim blijven */
+}
+
+/* INTRO */
+.academy-intro h2 {
+    font-size: 32px;         /* ⬅️ iets kleiner */
+    font-weight: 700;
+    margin-bottom: 16px;     /* ⬅️ compacter */
+    color: #000;
+    line-height: 1.15;
+}
+
+.academy-intro p {
+    font-size: 16px;         /* ⬅️ iets rustiger */
+    line-height: 1.65;
+    color: #333;
+    max-width: 760px;
+    margin-bottom: 14px;     /* ⬅️ compacter */
+}
+
+/* SUBTITLE */
+.academy-subtitle {
+    font-size: 26px;
+    font-weight: 700;
+    margin: 44px 0 22px;     /* ⬅️ minder witruimte */
+    color: #000;
+}
+
+/* ===========================
+   ACCORDION
+=========================== */
+
+.academy-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* ACCORDION ITEM */
+.academy-accordion details {
+    background: #faf6f8;
+    border-radius: 10px;
+    border: 1px solid #e6d8de;
+    padding: 0;
+    overflow: hidden;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.academy-accordion details:hover {
+    border-color: #8b1e3f;
+}
+
+/* OPEN STATE */
+.academy-accordion details[open] {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* SUMMARY */
+.academy-accordion summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 18px 56px 18px 22px; /* ⬅️ iets minder hoog */
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+    position: relative;
+    background: transparent;
+}
+
+.academy-accordion summary::-webkit-details-marker {
+    display: none;
+}
+
+/* PLUS / MINUS */
+.academy-accordion summary::after {
+    content: "+";
+    position: absolute;
+    right: 22px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 22px;
+    font-weight: 400;
+    color: #8b1e3f;
+}
+
+.academy-accordion details[open] summary::after {
+    content: "–";
+}
+
+/* CONTENT */
+.accordion-content {
+    padding: 0 22px 18px 22px; /* ⬅️ iets compacter */
+}
+
+.accordion-content ul {
+    margin: 10px 0 0;
+    padding-left: 20px;
+}
+
+.accordion-content li {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.accordion-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    margin: 10px 0 0;
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+.academy-button {
+    display: inline-block;
+    margin-top: 40px;        /* ⬅️ iets minder ruimte */
+    padding: 14px 32px;
+    font-size: 16px;
+    font-weight: 600;
+    background: #8b1e3f;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.academy-button:hover {
+    background: #721732;
+    transform: translateY(-1px);
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 1024px) {
+    .academy-section {
+        width: 90%;
+        margin: 40px auto 90px;
+    }
+
+    .academy-intro h2 {
+        font-size: 28px;
+    }
+
+    .academy-subtitle {
+        font-size: 22px;
+        margin: 34px 0 18px;
+    }
+
+    .academy-accordion summary {
+        font-size: 17px;
+        padding: 16px 52px 16px 18px;
+    }
+}

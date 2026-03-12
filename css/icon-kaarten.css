@@ -1,0 +1,75 @@
+body{
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* ===== ACTIEKAARTEN-CONTAINER ===== */
+/* WRAPPER VOOR ICON-BLOK */
+.icon-wrapper {
+    margin: 40px auto 60px;
+    width: 85%;
+    max-width: 1200px;
+    text-align: left;
+}
+
+/* Titel boven iconen */
+.icon-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #222;
+    display: flex;
+    justify-content: center;
+
+}
+
+.icon-section {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    padding: 30px 0 20px;
+    background: #fff;
+}
+
+/* KAARTJES – professioneel en subtiel */
+.icon-card {
+    background: white;
+    width: 130px;
+    height: 130px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06); /* subtieler */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 12px;
+    transition: all 0.22s ease;
+    cursor: pointer;
+}
+
+/* Icoon kleiner en strakker */
+.icon-card img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    transition: transform 0.22s ease;
+}
+
+/* Tekst compact */
+.icon-card p {
+    font-size: 15px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Professionele hover – licht & strak */
+.icon-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.10);
+}
+
+.icon-card:hover img {
+    transform: scale(1.06);
+}

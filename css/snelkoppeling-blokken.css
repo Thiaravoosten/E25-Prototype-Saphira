@@ -1,0 +1,115 @@
+body{
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* WRAPPER VOOR BLOK WRAPPER */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* WRAPPER */
+.block-wrapper {
+    margin: 40px auto 60px;
+    width: 76%;
+}
+
+.block-section {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: stretch; /* 👈 BELANGRIJK: gelijke hoogte */
+}
+
+/* CARD */
+.block-card {
+    background: #fff;
+    width: 390px;
+    min-height: 220px; /* 👈 basis gelijkheid, maar flexibel */
+    border-radius: 10px;
+
+    padding: 32px 28px;
+
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
+    border: 1px solid #d2d2d2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    transition: box-shadow 0.2s ease;
+}
+
+/* HOVER ALLEEN VIA LINK */
+.block-card:has(.card-link:hover) {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.8);
+}
+
+/* TITEL */
+.block-card h3 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #000;
+    margin: 0 0 12px 0;
+}
+
+/* TEKST */
+.block-card p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    margin: 0;
+    flex-grow: 1; /* 👈 vult ruimte gelijkmatig */
+}
+
+/* LINK */
+.card-link {
+    font-size: 16px;
+    font-weight: 600;
+    color: #444;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* PIJLTJE */
+.card-link::before {
+    content: "›";
+    font-size: 22px;
+    margin-right: 10px;
+    transition: transform 0.2s ease;
+}
+
+/* LINK HOVER */
+.card-link:hover {
+    color: #000;
+}
+
+.card-link:hover::before {
+    transform: translateX(4px);
+}
+
+/* STREEPJE ONDER LINK BIJ HOVER */
+.card-link {
+    position: relative;
+    padding-bottom: 4px; /* ruimte voor streepje */
+}
+
+.card-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #000;
+    transition: width 0.25s ease;
+}
+
+.card-link:hover::after {
+    width: 100%;
+}

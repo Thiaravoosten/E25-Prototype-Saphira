@@ -1,0 +1,49 @@
+body{
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* White NAV Bar*/
+.white-sub-bar{
+    background-color: white;
+    height: 65px;
+    width: 100%;
+    border-bottom: 1px solid #CBCBCB;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.logo-sub-bar{
+    width: 150px;
+    height: 150px;
+    margin-top: -60px;
+    margin-left: 210px; 
+}
+
+.main-menu {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    padding: 0;
+    margin-right: 50px; 
+    font-size: 16px;
+    align-items: center;
+}
+
+.main-menu li {
+    cursor: pointer;
+    color: #444;
+}
+
+.main-menu li:hover {
+    color: #d0350a;
+}
+
+.main-menu a{
+    color: inherit;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
