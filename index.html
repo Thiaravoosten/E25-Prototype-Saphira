@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E25 Prototype Test 3</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/top-bar.css">
+  <link rel="stylesheet" href="./css/red-sub-bar.css">
+  <link rel="stylesheet" href="./css/white-sub-bar.css">
+  <link rel="stylesheet" href="./css/banner.css">
+  <link rel="stylesheet" href="./css/footer.css">
+  <link rel="stylesheet" href="./css/zoekvenster.css">
+  <link rel="stylesheet" href="./css/snelkoppeling-blokken.css">
+  <link rel="stylesheet" href="./css/info.css">
+  <link rel="stylesheet" href="./css/carousel.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<style>
+  html{
+    background-color: white;
+  }
+  /* * {
+    outline: 1px solid red; 
+  } */
+</style>
+
+<body>
+
+  <header class="sp-topbar">
+    <!-- class="black-top-bar"> -->
+    <div class="sp-left">
+      <!-- <img src="./afbeeldingen/offlogo.png" class="sp-logo"> -->
+      <span class="sp-title">zorg en welzijn</span>
+      <span class="divider">·</span>
+      <span class="sp-subtitle">SharePoint</span>
+    </div>
+
+    <div class="sp-center">
+        <div class="searchbar">
+            <input type="text" placeholder="Doorzoek deze bibliotheek">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+    </div>
+
+    <div class="sp-right">
+        <i class="fa-solid fa-bullhorn"></i>
+        <i class="fa-solid fa-gear"></i>
+        <i class="fa-solid fa-circle-question"></i>
+        <div class="user">S</div>
+    </div>
+  </header>
+
+  <div class="red-sub-bar">
+    <div class="bar-title">
+      <h1>Forensische zorg Haaglanden</h1>
+    </div>
+  </div>
+  <div class="white-sub-bar">
+      <img class="logo-sub-bar" src="./afbeeldingen/logometwitterand.png" alt="logo-25">
+      <ul class="main-menu">
+        <li><i class="fa-solid fa-house"></i></li>
+        <li>Werk documenten</li>
+        <li>Team</li>
+        <li>Galerij</li>
+        <li><a href="faq.html">Veel gestelde vragen</a></li>
+        <li>Service & Contact</li>
+      </ul>
+  </div>
+
+  <div class="hero-section">
+    <div class="text-block">
+        <h1>Multifocaal werken gaan we versterken</h1>
+        <p>Iedereen is immers anders en wat voor de één werkt, hoeft niet voor de ander zo te zijn.</p>
+
+        <!-- <a href="#" class="cta-button">Bekijk uw zorgverzekering</a> -->
+    </div>
+  </div>
+<!-- =============== ZOEKVENSTER BLOK =============== -->
+<section class="zoekvenster-layout">
+
+  <!-- LINKERZIJDE: ZOEKVENSTER -->
+  <div class="zoekvenster-box">
+    <h2>E25 Diensten Catalogus</h2>
+
+    <form class="search-form" novalidate>
+      
+      <div class="input-group">
+        <label for="kennisveld">Kennisveld</label>
+        <select id="kennisveld">
+          <option value="">Selecteer...</option>
+          <option>Aandachtsdeficiëntie-/hyperactiviteitstoornis</option>
+          <option>Afhankelijke persoonlijkheidsstoornis</option>
+          <option>Autismespectrumstoornis</option>
+          <option>Bipolaire-stemmingsstoornis door een middel/medicatie</option>
+          <option>Bipolaire-stemmingsstoornis door een somatische aandoening</option>
+          <option>Borderline-persoonlijkheidsstoornis</option>
+          <option>Delirium</option>
+          <option>Depressieve stoornis</option>
+          <option>Globale ontwikkelingsachterstand</option>
+          <option>Intoxicatie door cannabis</option>
+          <option>Jeugd</option>
+          <option>Obsessieve-compulsieve stoornis (dwangstoornis)</option>
+          <option>Oppositionele opstandige stoornis</option>
+          <option>Persisterende depressieve stoornis</option>
+          <option>Posttraumatische stressstoornis</option>
+          <option>Schizoaffectieve stoornis</option>
+          <option>Schizofrenie</option>
+          <option>Stoornissen door een middel/medicatie</option>
+          <option>Uitgebreide neurocognitieve stoornis</option>
+          <option>Beperkte neurocognitieve stoornis</option>
+          <option>Vermijdende persoonlijkheidsstoornis</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label for="functie">Functie</label>
+        <select id="functie">
+          <option value="">Selecteer...</option>
+          <option>Bokscoach</option>
+          <option>Budgetcoach</option>
+          <option>Coach</option>
+          <option>Gedragswetenschapper</option>
+          <option>Jobcoach</option>
+          <option>Lifestylecoach</option>
+          <option>Locatiecoördinator</option>
+          <option>Personal training</option>
+          <option>Teamleider</option>
+          <option>Trajectcoördinator</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label for="locatie">Locatie</label>
+        <select id="locatie">
+          <option value="">Selecteer...</option>
+          <option>E25 Den Haag 1 - Oder 10</option>
+          <option>E25 Den Haag 2 - Mercuriusweg 26</option>
+          <option>E25 HUB</option>
+        </select>
+      </div>
+
+
+      <!-- 🔥 WARNING HIER (tussen locatie en knop) -->
+      <div id="inline-warning" class="inline-warning" hidden></div>
+
+      <button class="search-btn" type="submit">
+        Zoeken
+      </button>
+
+    </form>
+  </div>
+
+  <!-- RECHTERZIJDE: TOELICHTING + KNOP + DIAGRAM -->
+  <div class="zoekvenster-info">
+    <h3>Toelichting</h3>
+
+    <ul class="toelichting-list">
+      <li><strong>Gedragswetenschapper</strong> is beschikbaar voor traject inhoudelijke vragen.</li>
+      <li><strong>Trajectcoördinator</strong> is beschikbaar voor procesmatige vragen.</li>
+      <li><strong>Coach</strong> is beschikbaar voor algemene vragen m.b.t. het algehele traject van de cliënt.</li>
+      <li><strong>Inwork trajecten</strong> zijn aanvullend aan de coaching. Zet het passende vakgebied in via de <strong>locatiecoördinator</strong>.</li>
+      <li><strong>Arrangementen</strong> zijn aanvullend aan de coaching. De professionals zijn beschikbaar voor arrangement inhoudelijke vragen.</li>
+    </ul>
+
+    <button
+      type="button"
+      class="see-diagram-btn"
+      id="open-diagram"
+      aria-expanded="false"
+      aria-controls="diagram-inline"
+    >
+      Zie stroomdiagram
+    </button>
+
+    <div id="diagram-inline" class="diagram-panel" hidden>
+      <div class="diagram-panel-top">
+        <span class="diagram-panel-title">Stroomdiagram</span>
+      </div>
+
+      <img
+        src="./afbeeldingen/carousel/stroomdiagram_3_good.png"
+        alt="Stroomdiagram voor het kiezen van de juiste zoekroute"
+        class="diagram-inline-img"
+      />
+    </div>
+  </div>
+
+</section>
+
+<!-- Popup voor zoekresultaten -->
+<div id="search-results-popup" class="search-results-popup" style="display:none;">
+  <div class="popup-inner">
+    <span class="close-results" role="button" aria-label="Sluiten">&times;</span>
+    <h3>Zoekresultaten</h3>
+    <!-- <div id="search-summary" class="search-summary"></div> -->
+    <div id="results-container"></div>
+  </div>
+</div>
+
+<!-- Tooltip voor "+meer" -->
+<div id="kf-tooltip" class="kf-tooltip" style="display:none;">
+  <div class="kf-tooltip-inner">
+    <button type="button" class="kf-tooltip-close" aria-label="Sluiten">×</button>
+    <div class="kf-tooltip-title">Overige kennisvelden</div>
+    <ul class="kf-tooltip-list"></ul>
+  </div>
+</div>
+
+
+  <!-- =========== 3 snelkoppeling blokken =======================-->
+  <section class="block-wrapper">
+    <div class="block-section">
+      <div class="block-card">
+        <h3>E25 Academy</h3>
+        <p>Bij E25 geloven we dat echte groei pas ontstaat als je samen leert.<br> Daarom presenteren we met trots het nieuwe trainingsaanbod van de E25 Academy:<br> een samenhangend programma van trainingen en workshops die leerlingen, mentoren en professionals versterken.</p>
+        <a href="./trainingsaanbod.html" class="card-link">
+          Bekijk trainingsaanbod
+        </a>
+      </div>
+
+      <div class="block-card">
+        <h3>Nieuws</h3>
+        <p>Ik wil graag een mooi succesmoment met jullie delen. Cliënt X heeft zijn certificaat voor installatietechniek gehaald!<br>
+        Hij heeft tijdens zijn traject een positieve bijdrage geleverd bij de verbouwingen in de HUB in Rijswijk. Door de inzet en expertise van
+        vakman installatietechniek en de fijne samenwerking heeft cliënt X zich goed kunnen ontwikkelen en is hij nu klaar voor een baan. 
+      </p>
+        <a href="#" class="card-link">
+          Bekijk het laatste nieuws
+        </a>
+      </div>
+
+      <div class="block-card">
+        <h3>Scriptie Rapport</h3>
+        <p>
+          Multifocaal werken, de werkwijze van E25. De cliënt staat centraal en E25 biedt een plek waar hulp zo volledig mogelijk onder 'één dak' geboden wordt. Eenduidige communicatie, zichtbaarheid en een duidelijk overzicht van het hulpaanbod binnen E25 forensische zorg is hierbij van belang. 
+        </p>
+        <a href="#" class="card-link">
+          Bekijk de scriptie
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="info-section">
+
+    <div class="info-block">
+      <div class="info-text">
+        <h3>Arrangementen</h3>
+        <p>
+          Het plan van aanpak en de inzet van de arrangementen wordt in samenspraak met de cliënt, 
+          gedragswetenschapper van E25 en de reclassering vormgegeven. De coach blijft altijd betrokken en is het aanspreekpunt voor het inzetten van de arrangementen.
+        </p>
+        <a href="https://coach.e25.nl/wat-wij-doen/forensische-zorg/arrangementen/" target="_blank" class="info-link">   Lees meer over arrangementen</a>
+      </div>
+      <div class="info-image">
+        <img src="./afbeeldingen/icons/arrangementen2.png" alt="">
+      </div>
+    </div>
+  
+    <div class="info-block reverse">
+      <div class="info-text">
+        <h3>Leerwerktrajecten</h3>
+        <p>
+            De leerwerktrajecten InWork en Let's Work zijn nauw met elkaar verbonden. 
+            In een aantal weken worden deelnemers opgeleid voor een vak en stromen door naar Let's Work voor het vinden van een baan. 
+        </p>
+        <a href="https://www.badgecraft.eu/nl/login?back=%2Fnl%2Fmy%3Fswitch%3D1" target="_blank" class="info-link">Bekijk alle leerwerktrajecten </a>
+      </div>
+      <div class="info-image">
+        <img src="./afbeeldingen/icons/diverse vakgebieden2.png" alt="">
+      </div>
+    </div>
+
+      
+    <div class="info-block">
+      <div class="info-text">
+        <h3>Handelingsgerichte diagnostiek</h3>
+        <p>
+          De deelnemer staat centraal. Dit is het uitgangspunt van handelingsgerichte diagnostiek.<br> 
+          Team DABB verzorgt op maat gemaakte begeleiding en behandeling aan de hand van verkregen 
+          informatie vanuit de aanmelding, <br> de intake, de cliënt, de verwijzer en andere belangrijke betrokkenen. 
+        </p>
+        <a href="https://coach.e25.nl/wat-wij-doen/diagnostiek-en-behandeling/" target="_blank" class="info-link">Lees meer over handelingsgerichte diagnostiek</a>
+      </div>
+      <div class="info-image">
+        <img src="./afbeeldingen/icons/target2.png" alt="">
+      </div>
+    </div>
+  </section>
+
+  <section class="moments-section">
+
+    <div class="moments-inner">
+  
+      <div class="moments-carousel">
+  
+        <div class="moments-track">
+  
+          <div class="moments-slide">
+            <img src="./afbeeldingen/carousel/pr1_good.png" alt="">
+            <p>Prototype 1 - Zoekvenster met twee filter opties.</p>
+          </div>
+  
+          <div class="moments-slide">
+            <img src="./afbeeldingen/carousel/pr2_good.png" alt="">
+            <p>Prototype 2 - Zoekvenster met drie filter opties.</p>
+          </div>
+  
+          <div class="moments-slide">
+            <img src="./afbeeldingen/carousel/pr3_good.png" alt="">
+            <p>Prototype 3 - Sharepoint pagina met verdieping op de disciplines.</p>
+          </div>
+  
+          <div class="moments-slide">
+            <img src="./afbeeldingen/carousel/pr4_good.png" alt="">
+            <p>Prototype 4 - Proces ontwikkeling Sharepoint pagina.</p>
+          </div>
+
+          <div class="moments-slide">
+            <img src="./afbeeldingen/carousel/pr5_good_2.png" alt="">
+            <p>Prototype 5 - Proces ontwikkeling stroomdiagram en zoekvenster.</p>
+          </div>
+
+        </div>
+      </div>
+      <div class="moments-dots"></div>
+    </div>
+  </section>
+    
+  <!-- <section class="info-section">
+    <div class="info-block">
+      <div class="info-text">
+        <h3>Altijd inzicht in uw zorgkosten</h3>
+        <p>
+          Bekijk eenvoudig uw zorgkosten en declaraties, waar en wanneer u maar wilt.
+          Alles overzichtelijk op één plek.
+        </p>
+        <a href="https://www.e25.nl/" target="_blank" class="info-link">Meer info</a>
+      </div>
+      <div class="info-image">
+        <img src="./afbeeldingen/icons/laag drempelig2.png" alt="">
+      </div>
+    </div>
+  
+    <div class="info-block reverse">
+      <div class="info-text">
+        <h3>Hulp bij het kiezen van zorg</h3>
+        <p>
+          Vind snel en eenvoudig een zorgverlener die bij u past,
+          afgestemd op uw situatie en verzekering.
+        </p>
+        <a href="https://www.e25.nl/" target="_blank" class="info-link">Meer info</a>
+      </div>
+      <div class="info-image">
+        <img src="./afbeeldingen/icons/maatwerk2.png" alt="">
+      </div>
+    </div> -->
+  
+    <!-- <div class="info-block">
+      <div class="info-text">
+        <h3>Handelingsgerichte diagnostiek</h3>
+        <p>
+          De deelnemer staat centraal. Dit is het uitgangspunt van handelingsgerichte diagnostiek.<br> 
+          Team DABB verzorgt op maat gemaakte begeleiding en behandeling aan de hand van verkregen 
+          informatie vanuit de aanmelding, <br> de intake, de cliënt, de verwijzer en andere belangrijke betrokkenen. 
+        </p>
+        <a href="https://coach.e25.nl/wat-wij-doen/diagnostiek-en-behandeling/" target="_blank" class="info-link">Meer info</a>
+      </div>
+      <div class="info-image">
+        <img src="./afbeeldingen/icons/target2.png" alt="">
+      </div>
+    </div>
+  
+  </section> -->
+  <footer class="footer">
+    <p>© 2026 Saphira Prototype E25</p>
+  </footer>
+  <script src="./momenten.js"></script>
+  <script src="./search.js" defer></script>
+</body>
+</html>
