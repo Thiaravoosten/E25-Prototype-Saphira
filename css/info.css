@@ -1,0 +1,129 @@
+/* =========================
+   BASIS
+========================= */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #000;
+}
+
+/* =========================
+   INFO SECTION
+========================= */
+.info-section {
+    width: 76%;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 96px;
+}
+
+/* =========================
+   INFO BLOK
+========================= */
+.info-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;   /* zorgt dat alles compact blijft */
+    gap: 72px;
+}
+
+/* Afwisselend links / rechts */
+.info-block.reverse {
+    flex-direction: row-reverse;
+}
+
+/* =========================
+   TEKST
+========================= */
+.info-text {
+    flex: 0 0 520px;           /* vaste tekstkolom */
+    max-width: 520px;
+}
+
+.info-text h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0 0 16px;
+}
+
+.info-text p {
+    font-size: 17px;
+    line-height: 1.6;
+    color: #333;
+    margin: 0 0 18px;
+}
+
+/* =========================
+   LINK MET STREEPJE
+========================= */
+.info-link {
+    font-size: 17px;
+    font-weight: 600;
+    color: #000;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 4px;
+}
+
+.info-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #000;
+    transition: width 0.25s ease;
+}
+
+.info-link:hover::after {
+    width: 100%;
+}
+
+/* =========================
+   AFBEELDING
+========================= */
+.info-image {
+    flex: 0 0 260px;           /* vaste afbeeldingskolom */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-image img {
+    width: 220px;
+    height: 220px;
+    object-fit: contain;
+    border-radius: 50%;
+    background: #f6f1f3;
+    padding: 36px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 1024px) {
+    .info-section {
+        width: 90%;
+        gap: 72px;
+    }
+
+    .info-block,
+    .info-block.reverse {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 32px;
+    }
+
+    .info-text {
+        flex: unset;
+        max-width: 100%;
+    }
+
+    .info-image {
+        flex: unset;
+    }
+}
+

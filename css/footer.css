@@ -1,0 +1,11 @@
+body{
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.footer {
+    background-color: #7f1e38; /*222*/
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
