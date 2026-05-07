@@ -24,11 +24,10 @@ body {
 .info-block {
     display: flex;
     align-items: center;
-    justify-content: center;   /* zorgt dat alles compact blijft */
+    justify-content: center;   
     gap: 72px;
 }
 
-/* Afwisselend links / rechts */
 .info-block.reverse {
     flex-direction: row-reverse;
 }
@@ -37,7 +36,7 @@ body {
    TEKST
 ========================= */
 .info-text {
-    flex: 0 0 520px;           /* vaste tekstkolom */
+    flex: 0 0 520px;         
     max-width: 520px;
 }
 
@@ -86,7 +85,7 @@ body {
    AFBEELDING
 ========================= */
 .info-image {
-    flex: 0 0 260px;           /* vaste afbeeldingskolom */
+    flex: 0 0 260px;        
     display: flex;
     align-items: center;
     justify-content: center;

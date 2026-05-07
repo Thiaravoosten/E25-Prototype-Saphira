@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
     let currentIndex = 0;
     const slideCount = slides.length;
 
-    /* DOTS */
     slides.forEach((_, index) => {
         const dot = document.createElement("button");
         if (index === 0) dot.classList.add("active");
@@ -30,7 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
         dots[currentIndex].classList.add("active");
     }
 
-    /* AUTOPLAY */
     let autoplay = setInterval(nextSlide, 4500);
 
     function nextSlide() {

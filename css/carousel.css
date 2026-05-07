@@ -1,11 +1,7 @@
-/* ===========================
-   BIJZONDERE MOMENTEN (CLEAN)
-=========================== */
-
 .moments-section {
     width: 100%;
-    background: #7a1f36;            /* CZ-achtig bordeaux */
-    padding: 56px 0 48px;           /* ⬅️ compact */
+    background: #7a1f36;            
+    padding: 56px 0 48px;         
     margin: 96px 0;
 }
 
@@ -41,7 +37,7 @@
 /* AFBEELDING */
 .moments-slide img {
     width: 100%;
-    max-width: 820px;               /* ⬅️ beeld dominant maar niet overdreven */
+    max-width: 820px;               
     height: 360px;
     object-fit: cover;
     border-radius: 18px;

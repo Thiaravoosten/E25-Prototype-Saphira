@@ -19,14 +19,14 @@ body {
     display: flex;
     gap: 30px;
     justify-content: center;
-    align-items: stretch; /* 👈 BELANGRIJK: gelijke hoogte */
+    align-items: stretch;
 }
 
 /* CARD */
 .block-card {
     background: #fff;
     width: 390px;
-    min-height: 220px; /* 👈 basis gelijkheid, maar flexibel */
+    min-height: 220px; 
     border-radius: 10px;
 
     padding: 32px 28px;
@@ -60,7 +60,7 @@ body {
     line-height: 1.5;
     color: #333;
     margin: 0;
-    flex-grow: 1; /* 👈 vult ruimte gelijkmatig */
+    flex-grow: 1; 
 }
 
 /* LINK */
@@ -96,7 +96,7 @@ body {
 /* STREEPJE ONDER LINK BIJ HOVER */
 .card-link {
     position: relative;
-    padding-bottom: 4px; /* ruimte voor streepje */
+    padding-bottom: 4px; 
 }
 
 .card-link::after {

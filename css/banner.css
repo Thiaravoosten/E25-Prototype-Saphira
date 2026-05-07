@@ -8,13 +8,13 @@ body{
     display: flex;
     justify-content: flex-start; 
     align-items: center;
-    height: 450px;                           /* Mooie CZ–achtige hoogte */
+    height: 450px;                          
     padding-left: 80px;
     margin-top: 2px;                      /* Zet het tekstblok iets naar rechts */
     
     background-image: url("../afbeeldingen/test.png");
     background-size: cover;                  /* Foto bedekt alles */
-    background-position: center;             /* Mooie focus in het midden */
+    background-position: center;             /* focus in het midden */
     background-repeat: no-repeat;
     
     position: relative;
@@ -24,7 +24,6 @@ body{
     }
 }
 
-/* Donker overlay, zoals CZ */
 .hero-section::before {
     content: "";
     position: absolute;
@@ -69,18 +68,3 @@ body{
     margin-bottom: 30px;
 }
 
-/* BUTTON
-.cta-button {
-    display: inline-block;
-    background-color: #7f1e38;
-    color: white;
-    padding: 14px 26px;
-    border-radius: 8px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: 0.2s;
-}
-
-.cta-button:hover {
-    background-color: #c44a1b;
-} */

@@ -31,13 +31,12 @@ body{
     background: #fff;
 }
 
-/* KAARTJES – professioneel en subtiel */
 .icon-card {
     background: white;
     width: 130px;
     height: 130px;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.06); /* subtieler */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06); 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -48,7 +47,6 @@ body{
     cursor: pointer;
 }
 
-/* Icoon kleiner en strakker */
 .icon-card img {
     width: 70px;
     height: 70px;
@@ -57,14 +55,12 @@ body{
     transition: transform 0.22s ease;
 }
 
-/* Tekst compact */
 .icon-card p {
     font-size: 15px;
     font-weight: 600;
     color: #333;
 }
 
-/* Professionele hover – licht & strak */
 .icon-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 8px 22px rgba(0,0,0,0.10);

@@ -21,9 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const norm = (s) => String(s ?? "").trim().toLowerCase();
   const emptyDash = (v) => (v && v.trim() ? v : "-");
 
-  // =========================
-  // UI HELPERS
-  // =========================
+
   const showDiagram = () => diagramInline?.removeAttribute("hidden");
   const hideDiagram = () => diagramInline?.setAttribute("hidden", "");
 
@@ -48,9 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
     el?.addEventListener("change", resetUI);
   });
 
-  // =========================
-  // SEARCH SUMMARY (ALTIJD 3 REGELS)
-  // =========================
+
   const updateSummary = (kennisveld, functie, locatie) => {
     if (!searchSummary) return;
 
@@ -60,9 +56,6 @@ document.addEventListener("DOMContentLoaded", () => {
       `Locatie: ${emptyDash(locatie)}`;
   };
 
-  // =========================
-  // TOOLTIP
-  // =========================
   const hideTooltip = () => {
     if (!tooltip) return;
     tooltip.style.display = "none";
@@ -88,9 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
     tooltip.style.display = "block";
   };
 
-  // =========================
-  // FORM SUBMIT
-  // =========================
+
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
@@ -100,7 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const functie = norm(functieEl?.value);
     const locatie = norm(locatieEl?.value);
 
-    // WARNING LOGICA
+    // WARNING 
     if (!functie && (kennisveld || locatie)) {
       showWarning(`
         <strong>Geen functie geselecteerd</strong><br>
@@ -218,9 +209,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // =========================
-  // TOOLTIP GLOBAL
-  // =========================
+
   document.addEventListener("click", (e) => {
     const moreBtn = e.target.closest(".kf-more-btn");
 
@@ -239,9 +228,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // =========================
-  // ESC
-  // =========================
   document.addEventListener("keydown", (e) => {
     if (e.key !== "Escape") return;
 

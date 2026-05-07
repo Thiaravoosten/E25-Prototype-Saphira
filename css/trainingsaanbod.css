@@ -1,34 +1,34 @@
 /* ===========================
-   E25 ACADEMY SECTION (TIGHTER)
+   E25 ACADEMY SECTION 
 =========================== */
 
 .academy-section {
     width: 76%;
-    margin: 56px auto 120px; /* ⬅️ minder ruimte boven, onder mag ruim blijven */
+    margin: 56px auto 120px; 
 }
 
 /* INTRO */
 .academy-intro h2 {
-    font-size: 32px;         /* ⬅️ iets kleiner */
+    font-size: 32px;         
     font-weight: 700;
-    margin-bottom: 16px;     /* ⬅️ compacter */
+    margin-bottom: 16px;    
     color: #000;
     line-height: 1.15;
 }
 
 .academy-intro p {
-    font-size: 16px;         /* ⬅️ iets rustiger */
+    font-size: 16px;        
     line-height: 1.65;
     color: #333;
     max-width: 760px;
-    margin-bottom: 14px;     /* ⬅️ compacter */
+    margin-bottom: 14px;     
 }
 
 /* SUBTITLE */
 .academy-subtitle {
     font-size: 26px;
     font-weight: 700;
-    margin: 44px 0 22px;     /* ⬅️ minder witruimte */
+    margin: 44px 0 22px;     
     color: #000;
 }
 
@@ -65,7 +65,7 @@
 .academy-accordion summary {
     list-style: none;
     cursor: pointer;
-    padding: 18px 56px 18px 22px; /* ⬅️ iets minder hoog */
+    padding: 18px 56px 18px 22px; 
     font-size: 18px;
     font-weight: 600;
     color: #000;
@@ -95,7 +95,7 @@
 
 /* CONTENT */
 .accordion-content {
-    padding: 0 22px 18px 22px; /* ⬅️ iets compacter */
+    padding: 0 22px 18px 22px; 
 }
 
 .accordion-content ul {
@@ -123,7 +123,7 @@
 
 .academy-button {
     display: inline-block;
-    margin-top: 40px;        /* ⬅️ iets minder ruimte */
+    margin-top: 40px;        
     padding: 14px 32px;
     font-size: 16px;
     font-weight: 600;
